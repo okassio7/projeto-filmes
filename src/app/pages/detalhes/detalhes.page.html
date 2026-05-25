@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Detalhes do Filme
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" *ngIf="filme">
+
+  <div class="container">
+
+    <img [src]="filme.image" class="imagem-filme">
+
+    <h1>{{ filme.title }}</h1>
+
+    <p>
+      <strong>Diretor:</strong>
+      {{ filme.director }}
+    </p>
+
+    <p>
+      <strong>Produtor:</strong>
+      {{ filme.producer }}
+    </p>
+
+    <p>
+      <strong>Lançamento:</strong>
+      {{ filme.release_date }}
+    </p>
+
+    <p>
+      <strong>Nota:</strong>
+      {{ filme.rt_score }}
+    </p>
+
+    <p class="descricao">
+      {{ filme.description }}
+    </p>
+
+  </div>
+
+</ion-content>

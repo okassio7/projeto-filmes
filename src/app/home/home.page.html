@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Catálogo de Filmes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <div class="catalogo">
+
+    <ion-card *ngFor="let filme of filmes" class="card-filme">
+
+      <img [src]="filme.image" />
+
+      <ion-card-header>
+        <ion-card-title>
+          {{ filme.title }}
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <p>
+          <strong>Diretor:</strong>
+          {{ filme.director }}
+        </p>
+
+        <p>
+          <strong>Nota:</strong>
+          {{ filme.rt_score }}
+        </p>
+
+        <ion-button
+          expand="block"
+          color="primary"
+          [routerLink]="['/detalhes', filme.id]">
+
+          Ver detalhes
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

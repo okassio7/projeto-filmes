@@ -1,0 +1,7 @@
+{
+  "name": "projeto-filmes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
